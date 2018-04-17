@@ -6,15 +6,19 @@ module.exports = (state, complete) => {
 
         util         = require('../../utilities'),
         query        = require('../../queries'),
-        Wallet       = ( typeof config.mode != undefined && config.mode == 'final' && state.frozen == true
-                          ? require('../../classes/Wallet.Mainnet')
-                          : require('../../classes/Wallet.Testnet') )
+        Wallet       = ( util.misc.is_final_snapshot( config, state )
+                          ? require('../../classes/Wallet.Final')
+                          : require('../../classes/Wallet.Ongoing') )
 
   let   index        = 0,
         cache        = [],
         table,
         uniques
 
+  if( util.misc.is_final_snapshot( config, state ) )
+    console.log('Using Token State for Wallet Balances')
+  else
+    console.log('Using Cumulative Calculations for Wallet Balances')
 
   const init = (address, finished) => {
     let wallet = new Wallet( address, config )
@@ -32,7 +36,7 @@ module.exports = (state, complete) => {
 
     //Cumulative balance calculations are not required for final snapshot because tokens will be frozen
     //final balance calculation uses EOS ERC20 token's balanceOf() method.
-    if( typeof config.mode !== 'undefined' && config.mode == 'final' && state.frozen ) {
+    if( util.misc.is_final_snapshot( config, state ) ) {
       finished(null, wallet)
       return
     }
@@ -110,7 +114,7 @@ module.exports = (state, complete) => {
   }
 
   const save_or_continue = (next_address, is_complete = false) => {
-    if(cache.length >= 50 || is_complete || cache.length == state.total )
+    if(cache.length >= 50 || is_complete)
       query.wallets_bulk_upsert( cache )
         .then( () => reset_cache(next_address) )
     else

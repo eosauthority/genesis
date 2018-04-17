@@ -15,7 +15,7 @@ module.exports = ( state, complete ) => {
   const is_token_frozen = next => {
     contract.$token.methods.stopped().call()
       .then( stopped => {
-        state.frozen = stopped ? 1 : 0
+        state.frozen = stopped ? true : false
         next()
       })
   }
@@ -66,20 +66,16 @@ module.exports = ( state, complete ) => {
       when_tokens_froze,
     ], () => {
       //The crowdsale is over, and tokens are frozen.
-      if(state.frozen > 0 && state.crowdsale_over) {
-        // if(config.mode != "mainnet") {
-          //prompt "Would you like to generate a mainnet snapshot"
+      if(state.frozen === true && state.crowdsale_over) {
           complete(null, state)
-        // }
       }
-      //Tokens aren't frozen, but the mode is set for mainnet. Keep checking until tokens are frozen.
-      else if(state.frozen == 0 && state.crowdsale_over && config.mode == "ongoing") {
+      //Tokens aren't frozen, but the mode is set for final. Keep checking until tokens are frozen.
+      else if( state.frozen === false && state.crowdsale_over && config.mode == "final" ) {
         setTimeout(() => {
-          if(!recheck) console.log(colors.green("The crowdsale is over and your config indicats you would like to generate a mainnet snapshot, however, the tokens are not yet frozen. Will check once a second, until the tokens are frozen."))
+          if(!recheck) console.log(colors.green("The crowdsale is over and your config indicates you would like to generate a mainnet snapshot, however, the tokens are not yet frozen. Will check once a second, until the tokens are frozen."))
           check(true)
         }, 1000)
       }
-      //Tokens aren't frozen and the crowdsale isn't even over.
       else {
         complete(null, state)
       }

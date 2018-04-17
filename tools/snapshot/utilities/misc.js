@@ -52,6 +52,10 @@ const convert_ethpk_to_eospk = ( pubkey ) => {
   return eoskey
 }
 
+const is_final_snapshot = ( config, state ) => {
+  typeof config.mode !== 'undefined' && config.mode == 'final' && state.frozen === true
+}
+
 module.exports = {
   iota: iota,
   hex_to_ascii: hex_to_ascii,
@@ -63,5 +67,6 @@ module.exports = {
   tx_hash_from_query_results: tx_hash_from_query_results,
   pubkey_from_tx_hash: pubkey_from_tx_hash,
   convert_ethpk_to_eospk: convert_ethpk_to_eospk,
-  address_is_contract: address_is_contract
+  address_is_contract: address_is_contract,
+  is_final_snapshot: is_final_snapshot
 }

@@ -15,7 +15,6 @@ module.exports = (state, complete) => {
   }
 
   dailyTotals()
-  //dailyTotals( complete )
 
   //If more than one, adapt the above.
   /*series([

@@ -8,5 +8,6 @@ module.exports = ( state, complete )  => {
     state.block_end           = state.period_map[config.period].end
     global.config.mode        = "ongoing"
   }
+  console.log(`Block range set to ${state.block_begin} -> ${state.block_end} for mode ${config.mode}`)
   complete(null, state)
 }

@@ -34,6 +34,9 @@ module.exports = () => {
           config.period = period.last_closed()
         }
 
+        if(config.period > CS_NUMBER_OF_PERIODS-1)
+          config.period = CS_NUMBER_OF_PERIODS-1
+
         config = Object.assign( require('../../config.default'), config )
 
         next(null, config)
