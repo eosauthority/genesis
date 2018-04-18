@@ -6,9 +6,9 @@ module.exports = (state, complete) => {
 
         util         = require('../../utilities'),
         query        = require('../../queries'),
-        Wallet       = ( util.misc.is_final_snapshot( config, state )
+        Wallet       = util.misc.is_final_snapshot( config, state )
                           ? require('../../classes/Wallet.Final')
-                          : require('../../classes/Wallet.Ongoing') )
+                          : require('../../classes/Wallet.Ongoing')
 
   let   index        = 0,
         cache        = [],

@@ -27,7 +27,7 @@ module.exports = ( state, callback ) => {
     .destroy({ truncate : true, cascade: false })
     .then( () => {
       db.sequelize
-        .query(`INSERT INTO snapshot_unregistered (user, balance) SELECT address, balance_total FROM wallets WHERE valid=0 AND register_error!='exclude' AND balance_total>=${config.snapshot_minimum_balance} ORDER BY balance_total DESC`)
+        .query(`INSERT INTO snapshot_unregistered (user, balance) SELECT address, balance_total FROM wallets WHERE valid=0 AND register_error!='balance_insufficient' AND register_error!='exclude' ORDER BY balance_total DESC`)
         .then(results => {
           console.log( 'Snapshot Table Synced' )
           csv( callback )

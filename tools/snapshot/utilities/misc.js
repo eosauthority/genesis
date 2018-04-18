@@ -53,7 +53,7 @@ const convert_ethpk_to_eospk = ( pubkey ) => {
 }
 
 const is_final_snapshot = ( config, state ) => {
-  typeof config.mode !== 'undefined' && config.mode == 'final' && state.frozen === true
+  return typeof config.mode !== 'undefined' && config.mode == 'final' && state.frozen === true
 }
 
 module.exports = {
