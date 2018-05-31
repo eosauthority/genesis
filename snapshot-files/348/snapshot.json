@@ -1,0 +1,73 @@
+{
+	"version": "0.4.2-stable",
+	"parameters": {
+		"period": 348,
+		"block_begin": 3904416,
+		"block_end": 5705553
+	},
+	"accounts": {
+		"valid": 175738,
+		"registered": 119780,
+		"registered_included_percent": "68.15828107751312%",
+		"fallback": 55960,
+		"fallback_included_percent": "31.842856980277457%"
+	},
+	"supply": {
+		"total": 1000000000.1574,
+		"expected": 996000000,
+		"included": 975929775.8556,
+		"percent_included": "97%",
+		"liquid": 996000000.1585,
+		"margin_of_error": "-0.0000000159136546%"
+	},
+	"meta": {
+		"author": "EOS Authority",
+		"timestamp_started": 1527758018,
+		"timestamp_completed": 1527760269,
+		"total_time": "37m 31s"
+	},
+	"checksum": {
+		"output": {
+			"snapshot": "1dfd70fe27ecd1711ea34e8d1dbbeaa43190c57a",
+			"snapshot_unregistered": "092f7afec0aad555612d650eb10d43ba17934723",
+			"distribution": "5b4dae1adf376f9348e39ac9af8e5cabca86f621"
+		},
+		"db": {
+			"wallets": "2ebb1fb6647ed3e837dfe73ce891af6b638d55cc",
+			"buys": "8a6b5c5656c30cffbcc78237abbe4c67d4c257b1",
+			"claims": "970e44188f7f7a91c0272ee5c833d12efd256b3a",
+			"registrations": "4f843846eb0d6843b239d78d444fd8336b57ca94",
+			"transfers": "f8ab6c8cd9551584db51ba70157a0b343b6398ac",
+			"snapshot": "fc4fb9187e0505a5bdad8004c60fed21c546f49a",
+			"public_keys": "f633689b11ca6d7a9c9ef591500cbb155b0a6d27"
+		}
+	},
+	"stats": {
+		"contract": {
+			"buys": 232149,
+			"claims": 633557,
+			"reclaimables": 917,
+			"registrations": 210562,
+			"transfers": 3486817
+		}
+	},
+	"config": {
+		"period": 348,
+		"author": "EOS Authority",
+		"snapshot_minimum_balance": 1,
+		"overwrite_snapshot": true,
+		"recalculate_wallets": false,
+		"skip_web3_sync": false,
+		"include_b1": true,
+		"resume": true
+	},
+	"block_range": {
+		"begin": 3904416,
+		"end": 5705553
+	},
+	"distribution_status": {
+		"crowdsale_over": false,
+		"tokens_frozen": 0
+	},
+	"public_keys": 26483970
+}
