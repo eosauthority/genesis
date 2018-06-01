@@ -1,0 +1,84 @@
+{
+	"version": "0.4.5",
+	"parameters": {
+		"period": 349,
+		"block_begin": 3904416,
+		"block_end": 5710963
+	},
+	"accounts": {
+		"valid": 163144,
+		"registered": 124972,
+		"registered_included_percent": "76.60226548325406%",
+		"fallback": 38173,
+		"fallback_included_percent": "23.398347472171825%"
+	},
+	"supply": {
+		"total": 1000000000.1499,
+		"expected": 998000000,
+		"included": 984810895.5488,
+		"percent_included": "98%",
+		"liquid": 998000000.1486,
+		"margin_of_error": "-0.0000000148897796%"
+	},
+	"meta": {
+		"author": "EOS Authority",
+		"timestamp_started": 1527869018,
+		"timestamp_completed": 1527869331,
+		"total_time": "5m 13s"
+	},
+	"checksum": {
+		"output": {
+			"snapshot": "64c6916b2c398b663821ef39c30592e41499ac09",
+			"snapshot_unregistered": "1540d91127ffd6bdf0daa9676e648a87323c4554",
+			"distribution": "090f27fdee1496dcf568a743002979c05f4894cc"
+		},
+		"db": {
+			"wallets": "fe8fe2908b467aa217acc943b2c2dbe6e0430d5a",
+			"buys": "4a4ac84b5a778a6c731998bd5f8178a316bee6ff",
+			"claims": "2b7d72cacb7e546b0c9a6578e01cb5db47d0efd6",
+			"registrations": "ad8c2060a0648464cd5f2d5ebbd31e9bd56fd088",
+			"reclaimables": "716a1627574a803f855ac118980b0a1471053f0a",
+			"transfers": "300f26a699363396d10c2f319e6356a7f9d6dcc2",
+			"snapshot": "d1b4dacdb21066bbb8dcc0f5699034bf02d382a7",
+			"public_keys": "0e9bb3a4a368fa666ff3eb714129646508be3faa"
+		}
+	},
+	"stats": {
+		"contract": {
+			"buys": 0,
+			"claims": 0,
+			"reclaimables": 0,
+			"registrations": 0,
+			"transfers": 0
+		}
+	},
+	"config": {
+		"period": 349,
+		"author": "EOS Authority",
+		"snapshot_minimum_balance": 1,
+		"overwrite_snapshot": true,
+		"recalculate_wallets": false,
+		"skip_web3_sync": false,
+		"include_b1": true,
+		"resume": true,
+		"—": true,
+		"r": true,
+		"e": true,
+		"c": true,
+		"a": true,
+		"l": true,
+		"u": true,
+		"t": true,
+		"w": true,
+		"s": true
+	},
+	"block_range": {
+		"begin": 3904416,
+		"end": 5710963
+	},
+	"distribution_status": {
+		"crowdsale_over": false,
+		"tokens_frozen": 0
+	},
+	"public_keys": 26504390
+}
