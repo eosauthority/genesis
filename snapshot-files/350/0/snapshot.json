@@ -1,0 +1,77 @@
+{
+	"version": "0.4.6",
+	"parameters": {
+		"period": 350,
+		"block_begin": 3904416,
+		"block_end": 5716359
+	},
+	"accounts": {
+		"valid": 163229,
+		"registered": 129290,
+		"registered_included_percent": "79.2077388209203%",
+		"fallback": 33940,
+		"fallback_included_percent": "20.79287381531468%"
+	},
+	"supply": {
+		"total": 1000000000.1505,
+		"expected": 1000000000,
+		"included": 996009799.7765,
+		"percent_included": "99%",
+		"liquid": 1000000000.1518,
+		"margin_of_error": "-0.0000000151800000%"
+	},
+	"meta": {
+		"author": "EOS Authority",
+		"timestamp_started": 1527942040,
+		"timestamp_completed": 1527943062,
+		"total_time": "17m 2s"
+	},
+	"checksum": {
+		"output": {
+			"snapshot": "fd1b01e9216d414dfe941760932bdbf3ebc8d610",
+			"snapshot_unregistered": "b8c60c458a7467a684b9d207e126a6203eaa66e3",
+			"distribution": "c7a6ff3266a0d0c3075251f7587551635acbf81f"
+		},
+		"db": {
+			"wallets": "c55ba496d197edc47ab3c05a6fb65ca8307a0877",
+			"buys": "0bf90a6da5e0af9877b3fddac6376f584b14c783",
+			"claims": "dfbf8a577bc9b8a74c818d1edc5cc4e55bcd1653",
+			"registrations": "43a818859905e757a4423729fa0283c5f10a97d2",
+			"reclaimables": "000bcc0e20100bcd463510f5ed06f1990965f7e8",
+			"transfers": "c7761f31a1b0fc93ffa141914322ea79bdb463bc",
+			"snapshot": "59172a12361f4774c83372617ddd1d7d5e2efd8b",
+			"public_keys": "d9422e2d9a0153f00031c7b2563e2b0315ef0fb2"
+		}
+	},
+	"stats": {
+		"contract": {
+			"buys": 234215,
+			"claims": 635796,
+			"reclaimables": 979,
+			"registrations": 225710,
+			"transfers": 3560084
+		}
+	},
+	"config": {
+		"period": 350,
+		"author": "EOS Authority",
+		"snapshot_minimum_balance": 1,
+		"overwrite_snapshot": true,
+		"recalculate_wallets": false,
+		"skip_web3_sync": false,
+		"include_b1": true,
+		"load_config": true,
+		"poll": true,
+		"resume": true,
+		"verbose_mt": true
+	},
+	"block_range": {
+		"begin": 3904416,
+		"end": 5716359
+	},
+	"distribution_status": {
+		"crowdsale_over": true,
+		"tokens_frozen": 0
+	},
+	"public_keys": 26645059
+}
