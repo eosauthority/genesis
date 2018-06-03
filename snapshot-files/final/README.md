@@ -1,0 +1,1 @@
+Hello, these are final snapshot files, this powers the database on [EOS Authority](https://eosauthority.com). If you want to check your registration, please go to [EOS Authority](https://eosauthority.com) do not use these files. These are files are meant for BPs to check their data against our final database.
