@@ -1,0 +1,1 @@
+Hello, these are internal files, this is partial database on [EOS Authority](https://eosauthority.com). If you want to check your registration, please go to [EOS Authority](https://eosauthority.com) do not use these files.
